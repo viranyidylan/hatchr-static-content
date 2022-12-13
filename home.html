@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hatchr</title>
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        nav {
+            margin: 25px;
+        }
+
+        nav ul {
+            font-size: 20px;
+            font-weight: 600;
+            list-style-type: none;
+            float: right;
+        }
+
+        nav ul li {
+            float: left;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            padding: 0 30px;
+        }
+
+        #logo {
+            font-size: 26px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* #logo {
+            size: 2em;
+        } */
+
+        .header {
+            width: 100%;
+            height: 80px;
+            display: block;
+            background-color: #00070e;
+        }
+
+        .inner-header {
+            width: 1000px;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            margin: 0 auto;
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+        }
+
+
+        body {
+            margin: 0;
+            font-family: 'Rubik', sans-serif;
+            color: #001122;
+            background: #ececec;
+        }
+
+        section {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            /* justify-content: space-around; */
+            /* min-height: 400px; */
+            padding: 20px 17vw 20px 17vw;
+            background-color: #00070e;
+        }
+
+        section.hero {
+            padding: 10px 17vw 60px 17vw;
+        }
+
+        .hero h1 {
+            font-size: 54px;
+            text-align: center;
+            margin: 8px;
+            padding-top: 25px;
+        }
+
+        .hero h2 {
+            color: #b0b0b0;
+            font-size: 20px;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .hero {
+            aspect-ratio: 16/8;
+            color: white;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+        }
+
+        .hero .container {
+            padding-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        button {
+            padding: 12px 24px;
+            border-radius: 16px;
+            cursor: pointer;
+
+            background-color: #de1867;
+            border: none;
+            font-family: 'Rubik', sans-serif;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            font-weight: 600;
+            margin-right: 15px;
+        }
+
+        button.secondary-button {
+            background-color: #171e25;
+            color: White;
+        }
+
+        .button-box {
+            margin-left: 10px;
+        }
+
+        .primary-color {
+            color: #FF0066
+        }
+
+        .layer1 {
+            background-image: url('./hero-blob-scene.svg');
+        }
+
+        .container {
+            width: 90%;
+        }
+
+        .feature-walkthrough {
+            display: flex;
+            flex-direction: column;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+        .feature-walkthrough h1 {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .text-and-img {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        .img-padding {
+            padding-right: 40px;
+            padding-left: 40px;
+        }
+
+        .feature-walkthrough .text-block {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .feature-walkthrough-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            color: white;
+        }
+
+        section.feature-walkthrough-2 {
+            padding: 50px 8vw 50px 8vw;
+        }
+
+        .feature-walkthrough-2 .text-block {
+            padding: 25px;
+            
+        }
+
+        .feature-walkthrough-2 h1 {
+            font-size: 26px;
+            padding-top: 15px;
+        }
+
+        .feature-walkthrough-2 p {
+            font-size: 18px;
+            padding-top: 15px;
+            color: #b0b0b0;
+        }
+
+        .faq-section {
+            padding-top: 50px;
+            color: white;
+            padding-bottom: 70px;
+        }
+
+        .faq-section h1 {
+            font-size: 48px;
+            text-align: center;
+        }
+
+        .faq-section h2 {
+            font-size: 26px;
+        }
+
+
+        .faq-section p {
+            margin: 2px 0;
+            padding: 5px 0;
+            text-align: center;
+            font-size: 18px;
+            color: #b4b4b4;
+        }
+
+
+        .cta {
+            background-image: url('./cta-blob-scene.svg');
+            aspect-ratio: 40/10;
+            color: white;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        section.cta {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .cta h1 {
+
+            font-size: 48px;
+            color: white;
+            text-align: center;
+            margin: 8px;
+            padding-top: 25px;
+            padding-bottom: 15px;
+            
+
+        }
+
+        /* section.footer {
+            color: white;
+            background-image: url('./layered-waves-haikei (8).svg');
+            padding-bottom: 50px;
+
+
+            aspect-ratio: 20/1;
+            color: white;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+        } */
+    </style>
+</head>
+
+<body>
+
+    <!-- <nav>
+        <div class="inner-header">
+            <a href="#" id="logo">hatchr</a>
+
+            <ul>
+                <li><a href="#">For companies</a></li>
+                <li><a href="#">Get started</a></li>
+            </ul>
+        </div>
+
+    </nav> -->
+
+    <section class="hero layer1">
+        <nav>
+            <div class="inner-header">
+                <div class="logo-box">
+                    <a href="#" id="logo"><img src="./hatchr-logo-white.svg" alt="logo" height="40px"/></a>
+                </div>
+
+                <ul>
+                    <li><a href="companies">For companies</a></li>
+                    <li><a href="#">Coding tasks</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- <div class="container">
+            <h1>Showcase your skills with <span class="primary-color">code</span>, then connect with top companies</h1>
+            <h2>Hatchr is the platform for finding your next software engineering job. Forget 
+                We focus on what actually matters for software engineering - your ability to build things with code.</h2>
+        </div> -->
+
+        <div class="container">
+            <h1>Software engineering interviews are <span class="primary-color">broken</span>. Hatchr is fixing the
+                process.</h1>
+            <h2>Hatchr is the platform for you to find your next software engineering job.
+                Forget studying for coding whiteboards, memorising obscure algorithms questions and bragging about what
+                university you went to.
+                We focus on what actually matters for software engineering - your ability to build things with code.
+            </h2>
+        </div>
+
+        <!-- <div class="container">
+            <h1>Can you implement Dijkstra's algorithm from memory? No one cares.</h1>
+            <h2>Hatchr is the platform for finding your next software engineering job. Forget studying for coding whiteboards, memorising obscure algorithms questions 
+                and bragging about what university you went to or what company you've interned at.
+                We grill you on what actually matters for software engineering - your ability to build things with code.
+            </h2>
+        </div> -->
+
+        <div class="button-box">
+            <button>Get started</button>
+            <button class="secondary-button">See coding tasks</button>
+        </div>
+
+        </div>
+
+        <!-- <div class="container">
+            <h1>Don't know how to implement Dijkstra's algorithm from memory? We don't care.</h1>
+            <h2>Hatchr is the platform for finding your next software engineering job. Forget implementing complex, whiteboarding, 
+                We focus on what actually matters for software engineering - your ability to build things with code.</h2>
+        </div> -->
+
+    </section>
+
+    <section class="feature-walkthrough-2">
+
+        <div class="text-block">
+            <img src="./icons/code.svg" alt="assess" />
+
+            <h1>Complete a coding task to join top developers</h1>
+
+            <p>Pick up one of our coding tasks to showcase your skills and become a member of our professional network of software developers. 
+                Our assessments aren't meant to trick you or catch you out. We want to see you doing your best work with the languages and tools you're most comfortable.</p>
+        </div>
+
+
+
+        <div class="text-block">
+            <img src="./icons/report.svg" alt="assess" />
+
+            <h1>Let your skills do the talking</h1>
+
+            <p>Hatchr shifts the focus away from prestigious credentials, background or personal branding, and onto what really matters: your technical skills.
+                </p>
+        </div>
+
+
+        <div class="text-block">
+            <img src="./icons//chat.svg" alt="assess" />
+
+            <h1>Speak directly to companies</h1>
+
+            <p>We help developers find jobs at awesome companies. Companies contact you directly, no dealing with third-party recruiters
+                (who don't even know the difference between Java and JavaScript 🤮)</p>
+        </div>
+
+        <div class="text-block">
+            <img src="./icons/electric.svg" alt="assess" />
+
+            <h1>Streamline your job search</h1>
+
+            <p>Stop sending your resume to different job boards and wondering if you'll hear back. 
+                Hatchr allows you to conduct your job search on one platform, and connects you with companies that are specifically interested in the skills you've demonstrated. </p>
+        </div>
+
+
+    </section>
+
+    <section class="faq-section">
+        <h1>Frequently asked questions</h1>
+
+        <h2>How does it work?</h2>
+        <p>Taking one of our coding tasks gets you into the Hatchr platform. We review your submission and connect you
+            with companies that are looking for developers that match your skills. 
+            <p>If we believe your skills aren't at hatchr level then we provide you with actionable feedback for what we believe you should work on.
+                There's no trick to passing hatchr assessments, the way to prepare is to improve your coding ability.
+            </p>
+
+
+        <p>Hit "get started" for instructions on completing and submitting one of our coding tasks.</p>
+
+        <h2>How much does it cost?</h2>
+        <p>Hatchr’s process is free for software developers.</p>
+        <p>Companies pay us because we improve their hiring process.</p>
+        </p>
+
+        <h2>When should I pick up the coding task?</h2>
+        <p>You can take a coding task any time, you don’t even have to be actively looking for a job yet. Once you’ve
+            submitted the code we’ll reach out to you and find out a bit more about your current status.</p>
+
+        <h2>Why hatchr? 🐣</h2>
+        <p>We save you time. By fast tracking you to the final stage of interviews with each company you don’t have to
+            go through applications, cover letters and tech screens with each company individually.</p>
+        <p>We have a network of great companies that we will match you with based on your specific skillset and their
+            requirements.</p>
+        <p>Companies trust our ability to technically assess candidates and find talent that other recruiters can’t. If
+            you’re self taught, or have a nontraditional software development background, we provide you with an
+            opportunity to showcase your skills!</p>
+    </section>
+
+    <section class="cta">
+        <h1>Ready to find your next software engineering job?</h1>
+        <button>Get started</button>
+    </section>
+
+</body>
+
+</html>
